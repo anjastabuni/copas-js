@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Asap:wght@300;500&family=Bad+Script&family=Candal&family=Lora&family=Montagu+Slab:wght@200;400&family=Montserrat+Subrayada&family=Montserrat:wght@200;500;700&family=Nunito+Sans:wght@300;500&family=Orbitron:wght@500&family=Patrick+Hand&family=Poppins:wght@300;600&family=Quicksand:wght@300&family=Raleway&family=Ysabeau:wght@200;300;500&display=swap"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
       * {
         background-color: black;
@@ -36,8 +37,8 @@
         margin: 0;
         font-size: 20px;
       }
-      .btn {
-        background-color: #0d5acd;
+      .btn,
+      .btn-hapus {
         border-radius: 6px;
         border: none;
         color: #fff;
@@ -46,8 +47,18 @@
         margin-top: 10px;
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
       }
+      .btn {
+        background-color: #0d5acd;
+      }
       .btn:hover {
         background-color: #0846a4;
+        cursor: pointer;
+      }
+      .btn-hapus {
+        background-color: #cd2a0d;
+      }
+      .btn-hapus:hover {
+        background-color: #aa1f07;
         cursor: pointer;
       }
       textarea {
@@ -105,8 +116,10 @@
         </p>
       </div>
       <button class="btn" onclick="conpyContent()">Copy</button><br />
-
-      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <form action="#">
+        <textarea name="" id="hapus" cols="30" rows="10"></textarea>
+        <button class="btn-hapus" type="reset">Reser</button>
+      </form>
     </section>
     <script>
       let text = document.getElementById("myText").innerText;
