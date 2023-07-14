@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:wght@300;500&family=Bad+Script&family=Candal&family=Lora&family=Montagu+Slab:wght@200;400&family=Montserrat+Subrayada&family=Montserrat:wght@200;500;700&family=Nunito+Sans:wght@300;500&family=Orbitron:wght@500&family=Patrick+Hand&family=Poppins:wght@300;600&family=Quicksand:wght@300&family=Raleway&family=Ysabeau:wght@200;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        background-color: black;
+        color: white;
+        font-family: "Bad Script", cursive;
+        font-size: 20px;
+      }
+      section {
+        width: 40%;
+        margin: auto;
+      }
+      #myText {
+        border: 1px solid white;
+        width: 100%;
+        border-radius: 6px;
+        padding: 10px;
+        height: 400px;
+        font-weight: 400;
+        font-size: 15px;
+        overflow: inherit;
+      }
+      h5 {
+        font-weight: 600;
+        margin: 0;
+        font-size: 20px;
+      }
+      .btn {
+        background-color: #0d5acd;
+        border-radius: 6px;
+        border: none;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        width: fit-content;
+        margin-top: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      .btn:hover {
+        background-color: #0846a4;
+        cursor: pointer;
+      }
+      textarea {
+        border: 1px solid white;
+        width: 100%;
+        height: 400px;
+        border-radius: 6px;
+        padding: 10px;
+        margin-top: 50px;
+      }
+      @media only screen and (max-width: 1807px) {
+        section {
+          width: 50%;
+        }
+      }
+      @media only screen and (max-width: 1441px) {
+        section {
+          width: 60%;
+        }
+      }
+      @media only screen and (max-width: 1209px) {
+        section {
+          width: 70%;
+        }
+      }
+      @media only screen and (max-width: 1039px) {
+        section {
+          width: 80%;
+        }
+      }
+      @media only screen and (max-width: 910px) {
+        section {
+          width: 90%;
+        }
+      }
+      @media only screen and (max-width: 812px) {
+        section {
+          width: 100%;
+          margin: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div id="myText" placeholder="Enter text">
+        <h5>Zha Anjas Tabuni</h5>
+        <p>
+          Saat ini saya berada dalam tahap pertumbuhan liar ketika saya pertama kali terkena bidang baru yang saya sukai. Setiap hari, saya sibuk mewujudkan ide-ide itu datang ke pikiran, mengumpulkan pengalaman berharga dan minat tanpa
+          akhir dari baik keberhasilan maupun kegagalan, dan kemudian menggunakannya untuk lebih elegan implementasi ide-ide baru.
+        </p>
+        <p>
+          Saya menemukan diri saya tertarik pada kualitas yang beresonansi dengan saya dan saya aspirasi dalam berbagai bentuk desain grafis, antarmuka pengguna, animasi interaktif. Segala sesuatu yang membangkitkan estetika mirip dengan
+          yang disajikan dalam karya seperti Weight of the World oleh Suede dan film Babel menarik bagi saya.
+        </p>
+      </div>
+      <button class="btn" onclick="conpyContent()">Copy</button><br />
+
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </section>
+    <script>
+      let text = document.getElementById("myText").innerText;
+      const conpyContent = async () => {
+        try {
+          await navigator.clipboard.writeText(text);
+          console.log("content copied to clipboard");
+          //   copyed.textContent = "copied";
+          //   copyed.style.transition = "all 0.3s ease-in";
+        } catch (err) {
+          console.log("falled to copy; ", err);
+        }
+      };
+    </script>
+  </body>
+</html>
